@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Details Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Student Details Form</h2>
+    <form id="studentForm">
+
+      <!-- Student Name -->
+      <div class="form-group">
+        <label for="name">Student Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Department -->
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input type="text" id="department" name="department" placeholder="Enter your department" required>
+      </div>
+
+      <!-- Year -->
+      <div class="form-group">
+        <label for="year">Year</label>
+        <select id="year" name="year" required>
+          <option value="">-- Select Year --</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select>
+      </div>
+
+      <!-- Native (Tamil Nadu District) -->
+      <div class="form-group">
+        <label for="native">Native (Tamil Nadu District)</label>
+        <select id="native" name="native" required>
+          <option value="" disabled selected>-- Select District --</option>
+          <option value="Ariyalur">Ariyalur</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Cuddalore">Cuddalore</option>
+          <option value="Dharmapuri">Dharmapuri</option>
+          <option value="Dindigul">Dindigul</option>
+          <option value="Erode">Erode</option>
+          <option value="Kallakurichi">Kallakurichi</option>
+          <option value="Kanchipuram">Kanchipuram</option>
+          <option value="Kanyakumari">Kanyakumari</option>
+          <option value="Karur">Karur</option>
+          <option value="Krishnagiri">Krishnagiri</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Nagapattinam">Nagapattinam</option>
+          <option value="Namakkal">Namakkal</option>
+          <option value="Nilgiris">Nilgiris</option>
+          <option value="Perambalur">Perambalur</option>
+          <option value="Pudukkottai">Pudukkottai</option>
+          <option value="Ramanathapuram">Ramanathapuram</option>
+          <option value="Ranipet">Ranipet</option>
+          <option value="Salem">Salem</option>
+          <option value="Sivaganga">Sivaganga</option>
+          <option value="Tenkasi">Tenkasi</option>
+          <option value="Thanjavur">Thanjavur</option>
+          <option value="Theni">Theni</option>
+          <option value="Thoothukudi">Thoothukudi</option>
+          <option value="Tiruchirappalli">Tiruchirappalli</option>
+          <option value="Tirunelveli">Tirunelveli</option>
+          <option value="Tirupathur">Tirupathur</option>
+          <option value="Tiruppur">Tiruppur</option>
+          <option value="Tiruvallur">Tiruvallur</option>
+          <option value="Tiruvannamalai">Tiruvannamalai</option>
+          <option value="Tiruvarur">Tiruvarur</option>
+          <option value="Vellore">Vellore</option>
+          <option value="Viluppuram">Viluppuram</option>
+          <option value="Virudhunagar">Virudhunagar</option>
+        </select>
+      </div>
+
+      <!-- Father's Name -->
+      <div class="form-group">
+        <label for="fathername">Father's Name</label>
+        <input type="text" id="fathername" name="fathername" placeholder="Enter father's name" required>
+      </div>
+
+      <!-- Father's Occupation -->
+      <div class="form-group">
+        <label for="fatheroccupation">Father's Occupation</label>
+        <input type="text" id="fatheroccupation" name="fatheroccupation" placeholder="Enter father's occupation" required>
+      </div>
+
+      <!-- Main Domain -->
+      <div class="form-group">
+        <label for="maindomain">Main Domain</label>
+        <input type="text" id="maindomain" name="maindomain" placeholder="Enter your main domain (e.g. Web Dev, AI)" required>
+      </div>
+
+      <!-- About Family -->
+      <div class="form-group">
+        <label for="aboutfamily">About Family</label>
+        <textarea id="aboutfamily" name="aboutfamily" placeholder="Write about your family"></textarea>
+      </div>
+
+      <!-- Mobile Number -->
+      <div class="form-group">
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter your 10-digit mobile number" pattern="[0-9]{10}" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Your Email (for confirmation)</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email for confirmation" required>
+      </div>
+
+      <button type="submit">Submit & Send</button>
+      <p class="success-message" id="successMsg">✅ Details sent, PDF downloaded & confirmation email sent!</p>
+      <p class="error-message" id="errorMsg">❌ Failed to send. Please try again.</p>
+
+    </form>
+  </div>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
